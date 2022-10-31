@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sneakers-redux/static/css/main.6839ec4e.css",
+    "main.js": "/sneakers-redux/static/js/main.0202ef2f.js",
+    "index.html": "/sneakers-redux/index.html",
+    "main.6839ec4e.css.map": "/sneakers-redux/static/css/main.6839ec4e.css.map",
+    "main.0202ef2f.js.map": "/sneakers-redux/static/js/main.0202ef2f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6839ec4e.css",
+    "static/js/main.0202ef2f.js"
+  ]
+}
