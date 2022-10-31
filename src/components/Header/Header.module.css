@@ -1,0 +1,40 @@
+.header{
+   display: flex;
+   justify-content: space-between;
+   padding: 43px;
+   border-bottom: 1px solid #EAEAEA;
+ }
+ .header__left{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ .header__left img{
+   margin-right: 10px;
+ }
+ .header__left-h2{
+   font-size: 20px;
+   line-height: 24px;
+ }
+ .header__left_p{
+   font-size: 14px;
+   line-height: 16px;
+ }
+ .header__right{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   font-size: 14px;
+   line-height: 16px;
+ }
+ .header__right span{
+   margin: 0 30px 0px 10px;
+   position: relative;
+   top: -3px;
+ }
+ .header__right_like{
+   margin-right: 30px;
+ }
+ .cart{
+  cursor: pointer;
+ }

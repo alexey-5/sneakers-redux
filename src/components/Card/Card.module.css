@@ -1,0 +1,37 @@
+.card{
+   border: 1px solid #d8cece;
+   border-radius: 40px;
+   max-width: 210px;
+   height: 230px;
+   padding: 20px;
+   margin-right: 40px;
+   margin-top: 30px;
+   margin-bottom: 30px;
+   transition: all 0.5s;
+   background-color: rgb(247 241 241);
+ }
+ .card:hover{
+   box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.25);
+   transform: translateY(-7px);
+ }
+ .card__text{
+   font-size: 14px;
+   line-height: 17px; 
+   margin-bottom: 14px;
+ }
+ .card__prise{
+   display: flex;
+   justify-content: space-between;
+ }
+ .card__prise p{
+   font-size: 11px;
+ line-height: 13px;
+ text-transform: uppercase;
+ color: #BDBDBD;
+ }
+ .card__btn{
+   cursor: pointer;
+ }
+ .card__like{
+   position: absolute;
+ }
