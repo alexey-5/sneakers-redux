@@ -4,16 +4,10 @@ import CardFavor from "../CardFavor";
 
 function Home({
   eventSearch,
-  cartPlus,
   addSearch,
-  favoritePlus,
-  itemsCart,
-  itemsFavorite,
-  delItemFavor,
-  itemsFavorit
 }) {
   const items = useSelector((state)=>state.cart.baza)
-  console.log('hom-snik--',items);
+  const itemsFavorite = useSelector((state)=>state.favor.favor)
   return (
     <div className="content">
       <div className="content__search">
@@ -32,10 +26,6 @@ function Home({
             <Card
               {...item}
               key={index}
-              onClickPlus={cartPlus}
-              favoritePlus={favoritePlus}
-              itemsCart={itemsCart}
-              itemsFavorit={itemsFavorit}
             />
           ))}
       </div>
@@ -45,10 +35,6 @@ function Home({
           <CardFavor
             {...item}
             key={index}
-            onClickPlus={cartPlus}
-            favoritePlus={favoritePlus}
-            itemsCart={itemsCart}
-            delItemFavor={delItemFavor}
           />
         ))}
       </div>

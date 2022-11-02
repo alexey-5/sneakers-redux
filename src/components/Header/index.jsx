@@ -1,4 +1,5 @@
 import styles from './Header.module.css'
+
 function Header({openCart}) {
    return (
       <header className={styles.header}>

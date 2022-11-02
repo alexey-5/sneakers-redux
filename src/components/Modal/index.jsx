@@ -1,6 +1,10 @@
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCartDel } from "../../store/cartSlice";
 import styles from "./Modal.module.css";
 
-function Modal({ cCart, itemsCart, delItemCart }) {
+function Modal({ cCart}) {
+  const dispatch = useDispatch();
+  const itemsCart = useSelector((state)=>state.cart.cart)
   return (
     <div className={styles.modal} /* style={{display:'none'}} */>
       <div className={styles.modal__cart}>
@@ -27,7 +31,7 @@ function Modal({ cCart, itemsCart, delItemCart }) {
                     <b>{obj.prise} руб.</b>
                   </div>
                   <img
-                    onClick={() => delItemCart(obj.idt)}
+                    onClick={()=>dispatch(fetchCartDel(obj.id))}
                     className={styles.cart_del}
                     width={32}
                     height={32}
@@ -67,7 +71,7 @@ function Modal({ cCart, itemsCart, delItemCart }) {
               className={styles.cart_del}
               width={120}
               height={120}
-              src="img/cart-empty.png"
+              src={require(`../../img/cart-empty.png`)}
               alt="cart"
             />
             <h3>Корзина пустая</h3>
@@ -78,7 +82,7 @@ function Modal({ cCart, itemsCart, delItemCart }) {
                 className={styles.modal_left}
                 width={13}
                 height={13}
-                src="img/arr-left.svg"
+                src={require(`../../img/arr-left.svg`).default}
                 alt="like20"
               />{" "}
               Вернуться назад
