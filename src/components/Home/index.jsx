@@ -1,7 +1,8 @@
+import { useSelector } from "react-redux";
 import Card from "../Card";
 import CardFavor from "../CardFavor";
+
 function Home({
-  items,
   eventSearch,
   cartPlus,
   addSearch,
@@ -11,12 +12,14 @@ function Home({
   delItemFavor,
   itemsFavorit
 }) {
+  const items = useSelector((state)=>state.cart.baza)
+  console.log('hom-snik--',items);
   return (
     <div className="content">
       <div className="content__search">
         <h1>{eventSearch ? `поиск по:${eventSearch}` : "Все кроссовки"}</h1>
         <div className="content__search-block">
-          <img width={14} height={14} src="img/search14.svg" alt="search" />
+          <img width={14} height={14} src={require(`../../img/search14.svg`).default} alt="search" />
           <input onChange={addSearch} placeholder="Поиск..." />
         </div>
       </div>

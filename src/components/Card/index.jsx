@@ -17,15 +17,15 @@ function Card({id,idt,imgSrc,title,prise,onClickPlus, favoritePlus,itemsCart,ite
    }  
    return(
       <div className={styles.card}>
-            <img onClick={Like} className={styles.card__like} width={30} height={30} src={like?"img/like32.svg":"img/unlike30.svg" }alt="like" />
-            <img width={133} height={112} src={imgSrc} alt= {styles.sneak}/>
+            <img onClick={Like} className={styles.card__like} width={30} height={30} src={like?require(`../../img/like32.svg`).default:require(`../../img/unlike30.svg`).default}alt="like" />
+            <img width={133} height={112} src={require(`../../${imgSrc}`)} alt= {styles.sneak}/>
             <p className={styles.card__text}>{title}</p>
             <div className={styles.card__prise}>
               <div>
                 <p>ЦЕНА</p>
                 <b>{prise} руб.</b>
               </div>
-                <img onClick={Select} className={styles.card__btn} width={32} height={32} src={select?"img/plus-select.svg":"img/plus32.svg"} alt="plus" />
+                <img onClick={Select} className={styles.card__btn} width={32} height={32} src={select?require(`../../img/plus-select.svg`).default:require(`../../img/plus32.svg`).default} alt="plus" />
             </div>
           </div>
    )

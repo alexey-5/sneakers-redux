@@ -1,9 +1,11 @@
 import axios from "axios";   
 import { useEffect } from "react";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Modal from "./components/Modal";
+import { setBaza } from "./store/cartSlice";
 /* const arr = [{ imgSrc: "img/sneak/sn1.jpg", title: "Мужские Кроссовки Nike Blazer Mid Suede", prise: 2100 },
 { imgSrc: "img/sneak/sn2.jpg", title: "Мужские Кроссовки Nike Air Max 270", prise: 3400 },
 { imgSrc: "img/sneak/sn3.jpg", title: "Мужские Кроссовки uuu ZZZ Suede", prise: 5600 },] */
@@ -16,10 +18,8 @@ function App() {
   const [itemsFavorite, setItemsFavorite] = useState([]);
   const [eventSearch, setEventSearch] = useState(""); //======== */
   // useEffect(() => { // Алексей dynai48@yandex.ru  radio
-  /*  fetch('https://63271534ba4a9c47533059e2.mockapi.io/item')
-     .then((res)=>{return res.json();})
-     .then((json)=>{setItems(json)})
-   } */
+  const dispatch = useDispatch();
+ 
     const delItemCart = async(id) => { // удаление из корзины по аргументу - id
      await axios.delete(`https://63271534ba4a9c47533059e2.mockapi.io/cart/${id}`);
      await axios
@@ -47,7 +47,7 @@ function App() {
     axios
       .get("https://63271534ba4a9c47533059e2.mockapi.io/item")
       .then((res) => {
-        setItems(res.data);
+        dispatch(setBaza(res.data));
       });
     axios
       .get("https://63271534ba4a9c47533059e2.mockapi.io/cart")

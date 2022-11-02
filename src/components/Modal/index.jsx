@@ -1,4 +1,5 @@
 import styles from "./Modal.module.css";
+
 function Modal({ cCart, itemsCart, delItemCart }) {
   return (
     <div className={styles.modal} /* style={{display:'none'}} */>
@@ -10,7 +11,7 @@ function Modal({ cCart, itemsCart, delItemCart }) {
             className={styles.cart_del}
             width={32}
             height={32}
-            src="img/cart-del.svg"
+            src={require(`../../img/cart-del.svg`).default}
             alt="cart-del"
           />
         </h2>
@@ -20,7 +21,7 @@ function Modal({ cCart, itemsCart, delItemCart }) {
             <div className={styles.cart_items}>
               {itemsCart.map((obj, index) => (
                 <div key={index} className={styles.cart_item}>
-                  <img width={70} height={70} src={obj.imgSrc} alt="sneak" />
+                  <img width={70} height={70} src={require(`../../${obj.imgSrc}`)} alt="sneak" />
                   <div className={styles.cart_info}>
                     <p>{obj.title}</p>
                     <b>{obj.prise} руб.</b>
@@ -30,7 +31,7 @@ function Modal({ cCart, itemsCart, delItemCart }) {
                     className={styles.cart_del}
                     width={32}
                     height={32}
-                    src="img/cart-del.svg"
+                    src={require(`../../img/cart-del.svg`).default}
                     alt="cart-del"
                   />
                 </div>
@@ -55,7 +56,7 @@ function Modal({ cCart, itemsCart, delItemCart }) {
                 className={styles.modal_arr}
                 width={13}
                 height={13}
-                src="img/arr-r13.svg"
+                src={require(`../../img/arr-r13.svg`).default}
                 alt="like20"
               />
             </button>
