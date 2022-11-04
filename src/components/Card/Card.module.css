@@ -35,3 +35,6 @@
  .card__like{
    position: absolute;
  }
+ .card__disabled{
+   display: none;
+ }

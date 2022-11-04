@@ -2,6 +2,8 @@ import styles from "./Card.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCartDel, fetchCartPlus } from "../../store/cartSlice";
 import { fetchfavPlus } from "../../store/favorSlice";
+import { useState } from "react";
+import { useEffect } from "react";
 
 function Card({ id, idt, imgSrc, title, prise }) {
   //const onClBtn=()=>alert(title) /* Первый параметр от onClick содержит спецобъект по умолчанию*/
@@ -10,6 +12,14 @@ function Card({ id, idt, imgSrc, title, prise }) {
   const itemsCart = useSelector((state) => state.cart.cart);
   const itemsFavorit = useSelector((state) => state.favor.favor);
 
+  const [blocking, setBlocking] = useState(false); //блокировка кнопки
+  const [blockingF, setBlockingF] = useState(false); //блокировка кнопки
+
+  useEffect(() => {
+    setBlocking(false);
+    setBlockingF(false);
+  }, [itemsCart, itemsFavorit]); // Снятие блока после обновления корзины
+
   const select = itemsCart.find((item) => item.idt === idt); //если в корзине есть эта карточка - галочка
   const like = itemsFavorit.find((item) => item.idt === idt); //если в фаворитах есть эта карточка - галочка
   const obj = { id, idt, imgSrc, title, prise };
@@ -17,6 +27,7 @@ function Card({ id, idt, imgSrc, title, prise }) {
 
   const Select = () => {
     //find возвращает найденный по условию аргумент или andef.
+    setBlocking(true);
     const snik = itemsCart.find((item) => item.idt === idt);
     if (itemsCart.find((item) => item.idt === idt)) {
       dispatch(fetchCartDel(snik.id)); // удаление из корзины по аргументу - id
@@ -27,6 +38,7 @@ function Card({ id, idt, imgSrc, title, prise }) {
   };
 
   const Like = () => {
+    setBlockingF(true);
     /// const snik = itemsFavorit.find((item) => item.idt === idt);
     if (!itemsFavorit.find((item) => item.idt === idt)) {
       dispatch(fetchfavPlus(obj));
@@ -36,7 +48,7 @@ function Card({ id, idt, imgSrc, title, prise }) {
     <div className={styles.card}>
       <img
         onClick={Like}
-        className={styles.card__like}
+        className={blockingF ? styles.card__disabled : styles.card__like}
         width={30}
         height={30}
         src={
@@ -60,7 +72,7 @@ function Card({ id, idt, imgSrc, title, prise }) {
         </div>
         <img
           onClick={Select}
-          className={styles.card__btn}
+          className={blocking ? styles.card__disabled : styles.card__btn}
           width={32}
           height={32}
           src={
