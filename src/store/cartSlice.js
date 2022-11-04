@@ -54,6 +54,7 @@ const cartSlise = createSlice({
   initialState: {
     baza: [],
     cart: [],
+    sum: 0
     // sum: json.reduce((akk, elem) => akk + elem.price * elem.count, 0),
   },
 
@@ -85,6 +86,8 @@ const cartSlise = createSlice({
     [fetchCart.fulfilled]: (state, action) => {
       state.loading = "succeeded";
       state.cart = action.payload; // console.log('  Данные получены')
+      state.sum = state.cart.reduce((akk,elem)=>akk + elem.prise,0)
+      // console.log("Начальная корзина",state.cart);
     },
     [fetchCart.rejected]: (state) => {
       state.loading = "failed";
@@ -101,6 +104,8 @@ const cartSlise = createSlice({
       console.log('  Корзина пополнена');
      //state.cart = action.payload; 
      state.cart = action.payload;
+     state.sum = state.cart.reduce((akk,elem)=>akk + elem.prise,0)
+    // console.log(' akk- ',state.sum);
     },
     [fetchCartPlus.rejected]: (state) => {
       state.loading = "failed";
@@ -116,6 +121,7 @@ const cartSlise = createSlice({
       state.loading = "succeeded";
       console.log('  Удаление из корзины')
       state.cart = action.payload;
+      state.sum = state.cart.reduce((akk,elem)=>akk + elem.prise,0)
      //state.cart = action.payload; 
     },
     [fetchCartDel.rejected]: (state) => {

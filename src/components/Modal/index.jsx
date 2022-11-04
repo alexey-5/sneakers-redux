@@ -5,6 +5,7 @@ import styles from "./Modal.module.css";
 function Modal({ cCart}) {
   const dispatch = useDispatch();
   const itemsCart = useSelector((state)=>state.cart.cart)
+  const sum = useSelector((state)=>state.cart.sum)
   return (
     <div className={styles.modal} /* style={{display:'none'}} */>
       <div className={styles.modal__cart}>
@@ -46,12 +47,12 @@ function Modal({ cCart}) {
               <li>
                 <span>Итого: </span>
                 <div className={styles.modal_dot}></div>
-                <b>21 000 руб. </b>
+                <b>{sum} руб. </b>
               </li>
               <li>
                 <span>Налог 5%: </span>
                 <div className={styles.modal_dot}></div>
-                <b>1074 руб. </b>
+                <b>{sum*0.05} руб. </b>
               </li>
             </ul>
             <button className={styles.modal_btn}>
