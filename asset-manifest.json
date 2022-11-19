@@ -1,13 +1,30 @@
 {
   "files": {
-    "main.css": "/sneakers-redux/static/css/main.6839ec4e.css",
-    "main.js": "/sneakers-redux/static/js/main.0202ef2f.js",
+    "main.css": "/sneakers-redux/static/css/main.30768a99.css",
+    "main.js": "/sneakers-redux/static/js/main.08372197.js",
+    "static/media/sn2.jpg": "/sneakers-redux/static/media/sn2.c46afa5c5732d64efa1f.jpg",
+    "static/media/sn4.jpg": "/sneakers-redux/static/media/sn4.8dc3a5f2020e87d05e1f.jpg",
+    "static/media/sn1.jpg": "/sneakers-redux/static/media/sn1.7968ce92f7921a3aa40c.jpg",
+    "static/media/sn3.jpg": "/sneakers-redux/static/media/sn3.3680b30273fc52834e88.jpg",
+    "static/media/unlike30.svg": "/sneakers-redux/static/media/unlike30.f61bb2d8fb42b25154f26c179c466f23.svg",
+    "static/media/checked32.svg": "/sneakers-redux/static/media/checked32.890c21e6e092e231b04d.svg",
+    "static/media/plus-select.svg": "/sneakers-redux/static/media/plus-select.890c21e6e092e231b04d7f8d3b23767a.svg",
+    "static/media/like20.svg": "/sneakers-redux/static/media/like20.31c528b014374dd8bafb45d68779796e.svg",
+    "static/media/like32.svg": "/sneakers-redux/static/media/like32.9b9476985ff38b5fb1aaac6ddcc9946d.svg",
+    "static/media/login20.svg": "/sneakers-redux/static/media/login20.381202f7e3edbc1a00b14fbd5e529a32.svg",
+    "static/media/cart18.svg": "/sneakers-redux/static/media/cart18.5113b08fb682dc25f3856ef704a6c05d.svg",
     "index.html": "/sneakers-redux/index.html",
-    "main.6839ec4e.css.map": "/sneakers-redux/static/css/main.6839ec4e.css.map",
-    "main.0202ef2f.js.map": "/sneakers-redux/static/js/main.0202ef2f.js.map"
+    "static/media/search14.svg": "/sneakers-redux/static/media/search14.48c52bf5d459537e27c07f88eb08c050.svg",
+    "static/media/cart-del.svg": "/sneakers-redux/static/media/cart-del.b1fef0aa93fbf25374f4991d23f900d8.svg",
+    "static/media/plus32.svg": "/sneakers-redux/static/media/plus32.b88e94c67ea7ac0cfa69033241c96b8c.svg",
+    "static/media/resurs,js": "/sneakers-redux/static/media/resurs,js.78b523361b2023cc1b86",
+    "static/media/arr-r13.svg": "/sneakers-redux/static/media/arr-r13.fc3222511ec5a224a4abf3bbf4c2566f.svg",
+    "static/media/arr-left.svg": "/sneakers-redux/static/media/arr-left.ac63c7c4d2e44bfd03e9bc9511e2d9da.svg",
+    "main.30768a99.css.map": "/sneakers-redux/static/css/main.30768a99.css.map",
+    "main.08372197.js.map": "/sneakers-redux/static/js/main.08372197.js.map"
   },
   "entrypoints": [
-    "static/css/main.6839ec4e.css",
-    "static/js/main.0202ef2f.js"
+    "static/css/main.30768a99.css",
+    "static/js/main.08372197.js"
   ]
 }
