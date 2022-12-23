@@ -1,6 +1,8 @@
 import styles from './Header.module.css'
-
+import { useSelector } from "react-redux";
 function Header({openCart}) {
+   const sum = useSelector((state) => state.cart.sum )
+   
    return (
       <header className={styles.header}>
          <div className={styles.header__left}>
@@ -12,7 +14,7 @@ function Header({openCart}) {
          </div>
          <ul className={styles.header__right}>
             <li onClick={openCart} className={styles.cart}>
-               <img width={18} height={18} src={require('../../img/cart18.svg').default} alt="cart" /><span>1205 ₽ .</span>
+               <img width={18} height={18} src={require('../../img/cart18.svg').default} alt="cart" /><span>{sum} ₽.</span>
             </li>
             <li>
                <img className={styles.header__right_like} width={20} height={20} src={require('../../img/like20.svg').default} alt="like20" />
