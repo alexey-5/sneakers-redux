@@ -38,12 +38,12 @@ function Card({ id, idt, imgSrc, title, prise }) {
   };
 
   const Like = () => {
-    setBlockingF(true);
-    /// const snik = itemsFavorit.find((item) => item.idt === idt);
     if (!itemsFavorit.find((item) => item.idt === idt)) {
+      setBlockingF(true);
       dispatch(fetchfavPlus(obj));
     }
   };
+  
   return (
     <div className={styles.card}>
       <img
