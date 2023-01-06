@@ -27,6 +27,7 @@ function App() {
   const addSearch = (event) => {
     setEventSearch(event.target.value);
   };
+  
   return (
     <div className="wrapper">
       {openCart ? (

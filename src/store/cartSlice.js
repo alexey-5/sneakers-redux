@@ -78,6 +78,7 @@ const cartSlise = createSlice({
       state.baza = [];
       console.log("  Ошибка");
     },
+
     // ======= получение корзины
     [fetchCart.pending]: (state) => {
       state.loading = "pending";
@@ -94,6 +95,7 @@ const cartSlise = createSlice({
       state.cart = [];
       console.log("  Ошибка");
     },
+
     //============ добавление в корзину
     [fetchCartPlus.pending]: (state) => {
       state.loading = "pending";
@@ -112,6 +114,7 @@ const cartSlise = createSlice({
      // state.cart = [];
       console.log("  Ошибка");
     },
+    
     // ===============удаление из корзины
     [fetchCartDel.pending]: (state) => {
       state.loading = "pending";

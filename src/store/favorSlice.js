@@ -44,13 +44,13 @@ const favorSlise = createSlice({
    favor: [],
   },
 
-   reducers: {
+reducers: {
    setBaza(state, action){
       state.baza = action.payload
      }, 
     
   },
-  extraReducers:{
+extraReducers:{
     [fetchFavor.pending]: (state)=>{
        state.loading = 'pending';
        state.favor=[];  // console.log('  Идёт зарузка')
@@ -81,6 +81,7 @@ const favorSlise = createSlice({
      // state.cart = [];
       console.log("  Ошибка");
     },
+    
     // ===============удаление из fav
     [fetchfavtDel.pending]: (state) => {
       state.loading = "pending";

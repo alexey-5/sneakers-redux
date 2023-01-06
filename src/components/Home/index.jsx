@@ -11,10 +11,10 @@ function Home({
   return (
     <div className="content">
       <div className="content__search">
-        <h1>{eventSearch ? `поиск по:${eventSearch}` : "Все кроссовки"}</h1>
+        <h1>{eventSearch ? `поиск по: ${eventSearch}` : "Все кроссовки"}</h1>
         <div className="content__search-block">
           <img width={14} height={14} src={require(`../../img/search14.svg`).default} alt="search" />
-          <input onChange={addSearch} placeholder="Поиск..." />
+          <input onChange={addSearch} placeholder="Поиск..." value={eventSearch} />
         </div>
       </div>
       <div className="content__inner">
