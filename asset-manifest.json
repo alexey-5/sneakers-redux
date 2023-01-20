@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/sneakers-redux/static/css/main.30768a99.css",
+    "main.css": "/sneakers-redux/static/css/main.6bee5f50.css",
     "main.js": "/sneakers-redux/static/js/main.40da6842.js",
     "static/media/sn2.jpg": "/sneakers-redux/static/media/sn2.c46afa5c5732d64efa1f.jpg",
     "static/media/sn4.jpg": "/sneakers-redux/static/media/sn4.8dc3a5f2020e87d05e1f.jpg",
@@ -20,11 +20,11 @@
     "static/media/resurs,js": "/sneakers-redux/static/media/resurs,js.78b523361b2023cc1b86",
     "static/media/arr-r13.svg": "/sneakers-redux/static/media/arr-r13.fc3222511ec5a224a4abf3bbf4c2566f.svg",
     "static/media/arr-left.svg": "/sneakers-redux/static/media/arr-left.ac63c7c4d2e44bfd03e9bc9511e2d9da.svg",
-    "main.30768a99.css.map": "/sneakers-redux/static/css/main.30768a99.css.map",
+    "main.6bee5f50.css.map": "/sneakers-redux/static/css/main.6bee5f50.css.map",
     "main.40da6842.js.map": "/sneakers-redux/static/js/main.40da6842.js.map"
   },
   "entrypoints": [
-    "static/css/main.30768a99.css",
+    "static/css/main.6bee5f50.css",
     "static/js/main.40da6842.js"
   ]
 }
