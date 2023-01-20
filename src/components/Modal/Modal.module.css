@@ -95,3 +95,7 @@
  font-size: 16px;
 line-height: 24px;
 }
+@media (max-width:450px ){
+  .modal__cart {width: 275px;
+  padding: 15px;}
+}
